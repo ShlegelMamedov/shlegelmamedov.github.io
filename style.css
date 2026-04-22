@@ -1,0 +1,599 @@
+/* ===== ОБЩИЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+/* ===== ШАПКА И МЕНЮ ===== */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu li a {
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 70vh;
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #667eea;
+    text-align: center;
+}
+
+h2 {
+    color: #764ba2;
+    margin: 2rem 0 1rem;
+}
+
+h3 {
+    color: #333;
+    margin: 1.5rem 0 1rem;
+}
+
+/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
+.welcome {
+    text-align: center;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.team-intro h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.intro {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.quick-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #667eea;
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #764ba2;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: #764ba2;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+}
+
+/* ===== НАВЫКИ ===== */
+.skills-preview {
+    margin-top: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: #667eea;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* ===== ИНФОРМАЦИОННЫЕ БЛОКИ ===== */
+.study-info {
+    margin-top: 3rem;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.info-box h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-box p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+/* ===== СТРАНИЦА "О НАС" ===== */
+.team-section {
+    margin-bottom: 3rem;
+}
+
+.person-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #667eea;
+}
+
+.person-card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.person-info p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 5px;
+}
+
+.about-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+.study-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.study-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.study-item h4 {
+    margin-bottom: 0.8rem;
+    color: #667eea;
+}
+
+.goals-list {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.goals-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+}
+
+.goals-list li:last-child {
+    border-bottom: none;
+}
+
+/* ===== СТРАНИЦА "ОБРАЗОВАНИЕ" ===== */
+.education-main {
+    margin-bottom: 3rem;
+}
+
+.education-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.education-card h2 {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.education-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.detail-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.detail-item h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.subjects-section {
+    margin-bottom: 3rem;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.subject-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid #667eea;
+}
+
+.subject-card h4 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.subject-card ul {
+    padding-left: 1.5rem;
+}
+
+.subject-card li {
+    margin: 0.5rem 0;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-section {
+    margin-top: 3rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 2rem;
+    width: 15px;
+    height: 15px;
+    background: #667eea;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #667eea;
+}
+
+.timeline-year {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.timeline-content h4 {
+    color: #764ba2;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== СТРАНИЦА "НАВЫКИ" ===== */
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skill-category-block {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.skill-category-block h3 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.skills-list {
+    margin-top: 1rem;
+}
+
+.skill-bar {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-progress {
+    background: #e0e0e0;
+    height: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    height: 100%;
+    border-radius: 12px;
+    transition: width 1s ease;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tool-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== SOFT SKILLS ===== */
+.soft-skills {
+    margin-bottom: 3rem;
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.soft-skill-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #764ba2;
+}
+
+.soft-skill-card h4 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+/* ===== WHAT LEARNING ===== */
+.what-learning {
+    margin-top: 3rem;
+}
+
+.learning-list {
+    margin-top: 2rem;
+}
+
+.learning-item {
+    display: flex;
+    align-items: flex-start;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.learning-item:hover {
+    transform: translateX(10px);
+}
+
+.learning-icon {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.learning-item h4 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .profile-card {
+        padding: 2rem 1rem;
+    }
+    
+    .team-intro h2 {
+        font-size: 1.8rem;
+    }
+    
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .education-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.4rem;
+    }
+}
+
+/* ===== АНИМАЦИИ ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main > * {
+    animation: fadeIn 0.6s ease-out;
+}
